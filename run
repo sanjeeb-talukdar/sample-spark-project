@@ -1,5 +1,5 @@
 #!/bin/bash
-MASTER_URL=spark://$(hostname):7077
+MASTER_URL=spark://$(hostname):7077  # assuming Spark in running locally on standart port
 set -e  # fail on any error
 if [[ $1 == "-r" ]]; then
     sbt assembly

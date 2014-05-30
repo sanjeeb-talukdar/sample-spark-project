@@ -11,7 +11,7 @@ basic working setup. This setup includes:
  - SBT
    - assembly plugin for building uberjars
    - build script with Spark 1.0 and custom Hadoop client
- - sample Scala program in `src/scala/main/pack/Main`
+ - sample Scala program in `src/main/scala/pack/Main.scala`
  - short `run` script demonstrating how to submit application to cluster
 
 Code is purposely simplistic and designed for reading.
@@ -25,7 +25,8 @@ Running Sample Application
  - you have Spark installed and running locally in standalone mode; 
    if you want to run sample app against cluster or with other resource manager,
    modify SPARK_MASTER variable in `run` script
- - Spark's `bin` directory is on your system `PATH`
+ - Spark's `bin` directory is on your system `PATH`; this is needed 
+   to call `spark-submit` command
 
 Having this, you can build and launch sample app by calling 
 
