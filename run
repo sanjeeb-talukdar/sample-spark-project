@@ -1,0 +1,7 @@
+#!/bin/bash
+MASTER_URL=spark://$(hostname):7077
+set -e  # fail on any error
+if [[ $1 == "-r" ]]; then
+    sbt assembly
+fi
+spark-submit --class pack.Main --master $MASTER_URL --deploy-mode client target/scala-2.10/app-assembly-*.jar
